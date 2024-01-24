@@ -1,6 +1,6 @@
-FROM pytorch/pytorch:2.0.1-cuda11.7-cudnn8-devel
+FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel
 
-RUN apt-get update && apt-get install -y libgl1-mesa-glx libpci-dev curl nano psmisc zip git libcairo2 && apt-get --fix-broken install -y
+RUN apt-get update && apt-get install -y libgl1-mesa-glx libpci-dev curl nano psmisc zip git libcairo2 python3 && apt-get --fix-broken install -y
 
 RUN conda install -y faiss-gpu scikit-learn pandas flake8 yapf isort yacs gdown future libgcc -c conda-forge
 
